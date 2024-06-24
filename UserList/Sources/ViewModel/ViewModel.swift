@@ -16,23 +16,43 @@ class ViewModel: ObservableObject {
     
     
     // fonction modifiée pour que les modifications apportées à users et isLoading soient sur le thread principal
+//    func fetchUsers() {
+//        isLoading = true
+//        Task {
+//            do {
+//                let users = try await repository.fetchUsers(quantity: 20)
+//                DispatchQueue.main.async {  // S'assurer que les mises à jour de l'état se font sur le thread principal
+//                    self.users.append(contentsOf: users)
+//                    self.isLoading = false
+//                }
+//            } catch {
+//                DispatchQueue.main.async {
+//                    print("Error fetching users: \(error.localizedDescription)")
+//                    self.isLoading = false  // Même ici, assurez-vous de revenir au thread principal
+//                }
+//            }
+//        }
+//    }
+    
     func fetchUsers() {
         isLoading = true
         Task {
             do {
                 let users = try await repository.fetchUsers(quantity: 20)
-                DispatchQueue.main.async {  // S'assurer que les mises à jour de l'état se font sur le thread principal
+                DispatchQueue.main.async {
+                    print("Fetched user DOBs: \(users.map { $0.dob.date })") // Log des dates brutes
                     self.users.append(contentsOf: users)
                     self.isLoading = false
                 }
             } catch {
                 DispatchQueue.main.async {
                     print("Error fetching users: \(error.localizedDescription)")
-                    self.isLoading = false  // Même ici, assurez-vous de revenir au thread principal
+                    self.isLoading = false
                 }
             }
         }
     }
+
 
     func shouldLoadMoreData(currentItem item: User) -> Bool {
         guard let lastItem = users.last else { return false }

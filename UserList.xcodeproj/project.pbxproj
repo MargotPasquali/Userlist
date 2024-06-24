@@ -19,6 +19,9 @@
 		2FFB642A2AC6D255007F2F80 /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFB64292AC6D255007F2F80 /* UserListView.swift */; };
 		2FFB642C2AC6D256007F2F80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FFB642B2AC6D256007F2F80 /* Assets.xcassets */; };
 		AEB04CEF2C189A22007D16AC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEB04CEE2C189A22007D16AC /* ViewModel.swift */; };
+		AEC46CDC2C25B64700E81A9D /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CDB2C25B64700E81A9D /* GridView.swift */; };
+		AEC46CDE2C25BA5F00E81A9D /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CDD2C25BA5F00E81A9D /* ListView.swift */; };
+		AEC46CE02C25C56E00E81A9D /* DisplayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		2FFB642B2AC6D256007F2F80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2FFB64342AC6D256007F2F80 /* UserListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEB04CEE2C189A22007D16AC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AEC46CDB2C25B64700E81A9D /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		AEC46CDD2C25BA5F00E81A9D /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,9 @@
 		AEB04CF02C189ACF007D16AC /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				AEC46CDB2C25B64700E81A9D /* GridView.swift */,
+				AEC46CDD2C25BA5F00E81A9D /* ListView.swift */,
+				AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */,
 			);
 			path = ViewComponents;
 			sourceTree = "<group>";
@@ -270,12 +279,15 @@
 			files = (
 				2FF9D91D2ACB3D8800F3A6C5 /* HTTPMethod.swift in Sources */,
 				AEB04CEF2C189A22007D16AC /* ViewModel.swift in Sources */,
+				AEC46CE02C25C56E00E81A9D /* DisplayPicker.swift in Sources */,
 				2FF9D91B2ACB3CE600F3A6C5 /* URLRequest.swift in Sources */,
 				2FFB642A2AC6D255007F2F80 /* UserListView.swift in Sources */,
 				2FEF0C6F2ACB416C004DB87C /* UserListResponse.swift in Sources */,
 				2F804AE22ACC976300A46A03 /* UserDetailView.swift in Sources */,
 				2FF9D91F2ACB3DD400F3A6C5 /* UserListRepository.swift in Sources */,
 				2FFB64282AC6D255007F2F80 /* UserListApp.swift in Sources */,
+				AEC46CDE2C25BA5F00E81A9D /* ListView.swift in Sources */,
+				AEC46CDC2C25B64700E81A9D /* GridView.swift in Sources */,
 				2FEF0C712ACB45E3004DB87C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
