@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DisplayPicker: View {
-    @Binding var isGridView: Bool // Utiliser Binding pour propager l'état
+    @Binding var isGridView: Bool // Utilisation de Binding pour propager l'état
     
     var body: some View {
         Picker("Display", selection: $isGridView) {
@@ -24,6 +24,6 @@ struct DisplayPicker: View {
 }
 
 #Preview {
-    DisplayPicker(isGridView: .constant(true)) // Pour la prévisualisation, utilisez .constant
+    DisplayPicker(isGridView: .constant(true)) // .constant transmet la valeur du @Binding
 }
 

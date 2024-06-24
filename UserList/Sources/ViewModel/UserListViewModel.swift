@@ -7,40 +7,28 @@
 
 import Foundation
 
-class ViewModel: ObservableObject {
+class UserListViewModel: ObservableObject {
+    
+    // MARK: - Published Properties
+    
     @Published var users: [User] = []
     @Published var isLoading = false
     @Published var isGridView = false
     
-    let repository = UserListRepository()
+    // MARK: - Private Properties
+
+    private let repository = UserListRepository()
     
-    
-    // fonction modifiée pour que les modifications apportées à users et isLoading soient sur le thread principal
-//    func fetchUsers() {
-//        isLoading = true
-//        Task {
-//            do {
-//                let users = try await repository.fetchUsers(quantity: 20)
-//                DispatchQueue.main.async {  // S'assurer que les mises à jour de l'état se font sur le thread principal
-//                    self.users.append(contentsOf: users)
-//                    self.isLoading = false
-//                }
-//            } catch {
-//                DispatchQueue.main.async {
-//                    print("Error fetching users: \(error.localizedDescription)")
-//                    self.isLoading = false  // Même ici, assurez-vous de revenir au thread principal
-//                }
-//            }
-//        }
-//    }
-    
+    // MARK: - Methods
+
+    //Récupération des données Users
     func fetchUsers() {
         isLoading = true
         Task {
             do {
                 let users = try await repository.fetchUsers(quantity: 20)
                 DispatchQueue.main.async {
-                    print("Fetched user DOBs: \(users.map { $0.dob.date })") // Log des dates brutes
+//                    print("Fetched user DOBs: \(users.map { $0.dob.date })") // impression sur la console pour obtenir le bon format de date 
                     self.users.append(contentsOf: users)
                     self.isLoading = false
                 }

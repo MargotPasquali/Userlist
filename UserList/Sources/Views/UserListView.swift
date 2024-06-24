@@ -4,11 +4,10 @@
 //
 //  Created by Margot Pasquali on 20/06/2024.
 //
-
 import SwiftUI
 
 struct UserListView: View {
-    @StateObject private var viewModel = ViewModel()
+    @StateObject private var viewModel = UserListViewModel()
     
     var body: some View {
         NavigationView {
@@ -27,21 +26,15 @@ struct UserListView: View {
                     DisplayPicker(isGridView: $viewModel.isGridView) // Binding pour DisplayPicker
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
-                    reloadButton
+                    ReloadButton()
                 }
             }
         }
-        .onAppear { viewModel.fetchUsers() }
-    }
-    
-    
-    var reloadButton: some View {
-        Button(action: viewModel.reloadUsers) {
-            Image(systemName: "arrow.clockwise")
-                .imageScale(.large)
+        .onAppear {
+            viewModel.fetchUsers()
         }
+        .environmentObject(viewModel) // Nécessité de passer ViewModel par rapport à la preview de ReloadButton
     }
-    
 }
 
 #Preview {

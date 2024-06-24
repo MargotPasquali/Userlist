@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GridView: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var viewModel: UserListViewModel
 
     var body: some View {
             ScrollView {
@@ -51,7 +51,7 @@ struct GridView: View {
 }
 
 #Preview {
-    GridView().environmentObject(ViewModel())
+    GridView().environmentObject(UserListViewModel())
 }
 
 

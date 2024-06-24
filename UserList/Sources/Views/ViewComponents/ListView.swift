@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ListView: View {
-    @EnvironmentObject var viewModel: ViewModel
+    @EnvironmentObject var viewModel: UserListViewModel
 
     var body: some View {
         List(viewModel.users) { user in
@@ -55,5 +55,5 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView().environmentObject(ViewModel())
+    ListView().environmentObject(UserListViewModel())
 }
