@@ -50,8 +50,8 @@ struct GridView: View {
     }
 }
 
-#Preview {
-    GridView().environmentObject(UserListViewModel())
-}
 
+#Preview {
+    GridView().environmentObject(UserListViewModel(repository: UserListRepository()))
+}
 

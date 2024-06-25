@@ -7,7 +7,11 @@
 import SwiftUI
 
 struct UserListView: View {
-    @StateObject private var viewModel = UserListViewModel()
+    @StateObject private var viewModel: UserListViewModel
+
+        init(viewModel: UserListViewModel) {
+            _viewModel = StateObject(wrappedValue: viewModel)
+        }
     
     var body: some View {
         NavigationView {
@@ -38,5 +42,5 @@ struct UserListView: View {
 }
 
 #Preview {
-    UserListView()
+    UserListView(viewModel: UserListViewModel(repository: UserListRepository()))
 }

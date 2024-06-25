@@ -24,6 +24,7 @@
 		AEC46CE02C25C56E00E81A9D /* DisplayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */; };
 		AEC46CE22C29ACF900E81A9D /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */; };
 		AEC46CE42C29B60800E81A9D /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE32C29B60800E81A9D /* UserListViewModelTests.swift */; };
+		AEC46CE72C2AF5AB00E81A9D /* UserListRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayPicker.swift; sourceTree = "<group>"; };
 		AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		AEC46CE32C29B60800E81A9D /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
+		AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRepositoryMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				2FB4823B2ACC98DD0016CBA7 /* UserList.xctestplan */,
+				AEC46CE52C2AF58800E81A9D /* Mocks */,
 				2F015BA72ACC938F009A098C /* UserListRepositoryTests.swift */,
 				AEC46CE32C29B60800E81A9D /* UserListViewModelTests.swift */,
 			);
@@ -181,6 +184,14 @@
 				AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */,
 			);
 			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		AEC46CE52C2AF58800E81A9D /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +316,7 @@
 			files = (
 				2F015BA82ACC938F009A098C /* UserListRepositoryTests.swift in Sources */,
 				AEC46CE42C29B60800E81A9D /* UserListViewModelTests.swift in Sources */,
+				AEC46CE72C2AF5AB00E81A9D /* UserListRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

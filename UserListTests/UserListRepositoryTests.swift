@@ -3,6 +3,7 @@ import XCTest
 
 final class UserListRepositoryTests: XCTestCase {
     // Happy path test case
+    // Vérification que le repo récupère et décode correctement les données utilisateur à partir d'une requête réseau simulée
     func testFetchUsersSuccess() async throws {
         // Given
         let repository = UserListRepository(executeDataRequest: mockExecuteDataRequest)

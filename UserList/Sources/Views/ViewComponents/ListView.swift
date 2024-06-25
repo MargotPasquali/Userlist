@@ -55,5 +55,5 @@ struct ListView: View {
 }
 
 #Preview {
-    ListView().environmentObject(UserListViewModel())
+    ListView().environmentObject(UserListViewModel(repository: UserListRepository()))
 }
