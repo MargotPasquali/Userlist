@@ -134,9 +134,9 @@
 		2FFB64262AC6D255007F2F80 /* UserList */ = {
 			isa = PBXGroup;
 			children = (
-				2FF9D91E2ACB3DD400F3A6C5 /* UserListRepository.swift */,
-				2FF9D9172ACB3C0B00F3A6C5 /* Sources */,
 				2FF9D9182ACB3C1000F3A6C5 /* Resources */,
+				2FF9D9172ACB3C0B00F3A6C5 /* Sources */,
+				2FF9D91E2ACB3DD400F3A6C5 /* UserListRepository.swift */,
 			);
 			path = UserList;
 			sourceTree = "<group>";
