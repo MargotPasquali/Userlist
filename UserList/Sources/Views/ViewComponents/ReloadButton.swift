@@ -19,9 +19,6 @@ struct ReloadButton: View {
         }
     }
 
-//#Preview {
-//    ReloadButton().environmentObject(UserListViewModel())
-//}
 
 #Preview {
     ReloadButton().environmentObject(UserListViewModel(repository: UserListRepository()))
