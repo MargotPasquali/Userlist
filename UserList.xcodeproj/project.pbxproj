@@ -25,6 +25,8 @@
 		AEC46CE22C29ACF900E81A9D /* ReloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */; };
 		AEC46CE42C29B60800E81A9D /* UserListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE32C29B60800E81A9D /* UserListViewModelTests.swift */; };
 		AEC46CE72C2AF5AB00E81A9D /* UserListRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */; };
+		AEC46CEC2C2C525700E81A9D /* GridCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CEB2C2C525700E81A9D /* GridCellView.swift */; };
+		AEC46CEF2C2C547A00E81A9D /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC46CEE2C2C547A00E81A9D /* ListRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadButton.swift; sourceTree = "<group>"; };
 		AEC46CE32C29B60800E81A9D /* UserListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewModelTests.swift; sourceTree = "<group>"; };
 		AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListRepositoryMock.swift; sourceTree = "<group>"; };
+		AEC46CEB2C2C525700E81A9D /* GridCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridCellView.swift; sourceTree = "<group>"; };
+		AEC46CEE2C2C547A00E81A9D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,9 +155,9 @@
 		AEB04CEB2C188702007D16AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				AEB04CF02C189ACF007D16AC /* ViewComponents */,
-				2FFB64292AC6D255007F2F80 /* UserListView.swift */,
 				2F804AE12ACC976300A46A03 /* UserDetailView.swift */,
+				2FFB64292AC6D255007F2F80 /* UserListView.swift */,
+				AEB04CF02C189ACF007D16AC /* ViewComponents */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -178,8 +182,8 @@
 		AEB04CF02C189ACF007D16AC /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
-				AEC46CDB2C25B64700E81A9D /* GridView.swift */,
-				AEC46CDD2C25BA5F00E81A9D /* ListView.swift */,
+				AEC46CEA2C2C523A00E81A9D /* Grid */,
+				AEC46CED2C2C545F00E81A9D /* List */,
 				AEC46CDF2C25C56E00E81A9D /* DisplayPicker.swift */,
 				AEC46CE12C29ACF900E81A9D /* ReloadButton.swift */,
 			);
@@ -192,6 +196,24 @@
 				AEC46CE62C2AF5AB00E81A9D /* UserListRepositoryMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		AEC46CEA2C2C523A00E81A9D /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				AEC46CDB2C25B64700E81A9D /* GridView.swift */,
+				AEC46CEB2C2C525700E81A9D /* GridCellView.swift */,
+			);
+			path = Grid;
+			sourceTree = "<group>";
+		};
+		AEC46CED2C2C545F00E81A9D /* List */ = {
+			isa = PBXGroup;
+			children = (
+				AEC46CDD2C25BA5F00E81A9D /* ListView.swift */,
+				AEC46CEE2C2C547A00E81A9D /* ListRow.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,9 +326,11 @@
 				2F804AE22ACC976300A46A03 /* UserDetailView.swift in Sources */,
 				2FF9D91F2ACB3DD400F3A6C5 /* UserListRepository.swift in Sources */,
 				2FFB64282AC6D255007F2F80 /* UserListApp.swift in Sources */,
+				AEC46CEC2C2C525700E81A9D /* GridCellView.swift in Sources */,
 				AEC46CDE2C25BA5F00E81A9D /* ListView.swift in Sources */,
 				AEC46CDC2C25B64700E81A9D /* GridView.swift in Sources */,
 				2FEF0C712ACB45E3004DB87C /* User.swift in Sources */,
+				AEC46CEF2C2C547A00E81A9D /* ListRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

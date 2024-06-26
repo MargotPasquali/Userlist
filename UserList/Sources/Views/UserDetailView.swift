@@ -10,11 +10,11 @@ struct UserDetailView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 200, height: 200)
-                    .clipShape(Circle())
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             } placeholder: {
                 ProgressView()
                     .frame(width: 200, height: 200)
-                    .clipShape(Circle())
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
             
             VStack(alignment: .leading) {
